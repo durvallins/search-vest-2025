@@ -1,9 +1,6 @@
 # Ignore arquivos do Jupyter Notebook
 *.ipynb
 
-# Ignore arquivos de imagem PNG
-*.png
-
 # Ignore arquivos de cache do Python
 *.pyc
 __pycache__/
