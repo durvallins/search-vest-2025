@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image  # Para carregar a imagem
+from dotenv import load_dotenv
+import os
+
+# Carregar as variáveis de ambiente do arquivo .env
+load_dotenv()
 
 # Configura a página para o layout wide
 st.set_page_config(layout="wide")
@@ -10,7 +15,7 @@ pd.set_option('display.max_columns', None)  # Exibe todas as colunas
 pd.set_option('display.width', 1000)        # Ajusta a largura máxima para exibir colunas
 
 # URL do CSV
-url_vestibular = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT45YDXevL7xGBAE7x8CN-7B2cXWN8YtmSN98pEbzpkJhvEY234T0Jp6Ntm9hNZgN9U1Q2ZiiDZG7sS/pub?gid=136567823&single=true&output=csv"
+url_vestibular = os.getenv('URL_VESTIBULAR')
 
 # Função para baixar o CSV e carregar em um DataFrame
 def baixar_csv_para_df(url):
