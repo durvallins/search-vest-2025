@@ -1,3 +1,4 @@
 streamlit>=1.20.0
 pandas>=1.5.3
 Pillow>=9.2.0  # Para suporte a imagens (PIL)
+dotenv
